@@ -250,7 +250,7 @@ export function PortfolioComponent() {
               <div className="relative">
                 <div className="absolute -inset-2 bg-[#4ecca3] rounded-lg blur opacity-75 animate-pulse"></div>
                 <Image
-                  src="/my1.jpg"
+                  src="/himp.png"
                   alt="Vicky Mosafan"
                   width={450}
                   height={250}
