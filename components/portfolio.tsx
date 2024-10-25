@@ -658,14 +658,6 @@ export function PortfolioComponent() {
               whileTap={{y: 0}}
               className="text-gray-400 hover:text-[#4ecca3]"
             >
-              <Twitter className="w-6 h-6" />
-            </motion.a>
-            <motion.a
-              href="mailto:vicky@mosafan.com"
-              whileHover={{y: -2}}
-              whileTap={{y: 0}}
-              className="text-gray-400 hover:text-[#4ecca3]"
-            >
               <Mail className="w-6 h-6" />
             </motion.a>
           </div>
