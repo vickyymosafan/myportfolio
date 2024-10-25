@@ -299,7 +299,7 @@ export function PortfolioComponent() {
               <div className="relative">
                 <div className="absolute -inset-2 bg-[#4ecca3] rounded-lg blur opacity-75 animate-pulse"></div>
                 <Image
-                  src="/himp.png"
+                  src="/image.png"
                   alt="Vicky Mosafan"
                   width={450}
                   height={250}
@@ -506,7 +506,10 @@ export function PortfolioComponent() {
                     text: "Innovative Ideas",
                   },
                   {icon: <Code className="w-8 h-8" />, text: "Clean Code"},
-                  {icon: <Zap className="w-8 h-8" />, text: "High Performance"},
+                  {
+                    icon: <Zap className="w-8 h-8" />,
+                    text: "High Performance",
+                  },
                 ].map((item, index) => (
                   <motion.div
                     key={index}
