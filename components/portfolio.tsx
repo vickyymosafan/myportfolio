@@ -15,6 +15,7 @@ import {
   Code,
   Zap,
   X,
+  Menu,
 } from "lucide-react";
 
 const skills = [
@@ -57,6 +58,7 @@ export function PortfolioComponent() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const controls = useAnimation();
 
   useEffect(() => {
@@ -93,6 +95,7 @@ export function PortfolioComponent() {
     if (element) {
       element.scrollIntoView({behavior: "smooth"});
     }
+    setIsMenuOpen(false);
   };
 
   const nextSkill = () => {
@@ -126,7 +129,9 @@ export function PortfolioComponent() {
       {/* Navigation */}
       <nav
         className={`fixed top-0 left-0 right-0 z-50 px-6 py-4 transition-all duration-300 ${
-          isNavbarHovered ? "bg-[#16213e] bg-opacity-90" : "bg-transparent"
+          isNavbarHovered || isMenuOpen
+            ? "bg-[#16213e] bg-opacity-90"
+            : "bg-transparent"
         }`}
         onMouseEnter={() => setIsNavbarHovered(true)}
         onMouseLeave={() => setIsNavbarHovered(false)}
@@ -140,7 +145,7 @@ export function PortfolioComponent() {
           >
             <Image src="/white_on_trans.png" alt="" width={70} height={70} />
           </motion.div>
-          <div className="flex justify-center flex-grow">
+          <div className="hidden md:flex justify-center flex-grow">
             {["home", "about", "skills", "projects", "contact"].map((item) => (
               <motion.button
                 key={item}
@@ -155,8 +160,52 @@ export function PortfolioComponent() {
               </motion.button>
             ))}
           </div>
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-white focus:outline-none"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
+          </div>
         </div>
       </nav>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{opacity: 0, y: -20}}
+            animate={{opacity: 1, y: 0}}
+            exit={{opacity: 0, y: -20}}
+            className="fixed inset-0 bg-[#16213e] bg-opacity-95 z-40 md:hidden"
+          >
+            <div className="flex flex-col items-center justify-center h-full">
+              {["home", "about", "skills", "projects", "contact"].map(
+                (item) => (
+                  <motion.button
+                    key={item}
+                    onClick={() => scrollToSection(item)}
+                    className={`text-xl font-bold my-4 hover:text-[#4ecca3] transition-colors ${
+                      activeSection === item ? "text-[#4ecca3]" : "text-white"
+                    }`}
+                    whileHover={{scale: 1.1}}
+                    whileTap={{scale: 0.95}}
+                  >
+                    {item.toUpperCase()}
+                  </motion.button>
+                )
+              )}
+            </div>
+            <button
+              onClick={() => setIsMenuOpen(false)}
+              className="absolute top-4 right-4 text-white focus:outline-none"
+            >
+              <X className="w-6 h-6" />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Hero Section */}
       <section
