@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import Image from "next/image";
-import { motion, AnimatePresence, useAnimation } from "framer-motion";
+import {motion, AnimatePresence, useAnimation} from "framer-motion";
 import {
   Github,
   Linkedin,
@@ -22,7 +22,7 @@ const skills = [
     name: "HTML",
     icon: "https://img.icons8.com/color/48/000000/html-5--v1.png",
   },
-  { name: "CSS", icon: "https://img.icons8.com/color/48/000000/css3.png" },
+  {name: "CSS", icon: "https://img.icons8.com/color/48/000000/css3.png"},
   {
     name: "JavaScript",
     icon: "https://img.icons8.com/color/48/000000/javascript--v1.png",
@@ -84,14 +84,14 @@ export function PortfolioComponent() {
   useEffect(() => {
     controls.start({
       y: [0, -10, 0],
-      transition: { repeat: Infinity, duration: 2 },
+      transition: {repeat: Infinity, duration: 2},
     });
   }, [controls]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({behavior: "smooth"});
     }
   };
 
@@ -133,9 +133,9 @@ export function PortfolioComponent() {
       >
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{opacity: 0, x: -20}}
+            animate={{opacity: 1, x: 0}}
+            transition={{duration: 0.5}}
             className="text-[#4ecca3] font-bold text-3xl"
           >
             <Image src="/white_on_trans.png" alt="" width={70} height={70} />
@@ -148,8 +148,8 @@ export function PortfolioComponent() {
                 className={`text-sm font-bold mx-4 hover:text-[#4ecca3] transition-colors ${
                   activeSection === item ? "text-[#4ecca3]" : "text-white"
                 }`}
-                whileHover={{ y: -2 }}
-                whileTap={{ y: 0 }}
+                whileHover={{y: -2}}
+                whileTap={{y: 0}}
               >
                 {item.toUpperCase()}
               </motion.button>
@@ -171,39 +171,39 @@ export function PortfolioComponent() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1a1a2e] z-0"></div>
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{opacity: 0, y: 20}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.5}}
             className="text-5xl md:text-7xl font-bold mb-4 font-serif text-[#4ecca3]"
           >
             Vicky Mosafan
           </motion.h1>
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            initial={{opacity: 0, y: 20}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.5, delay: 0.2}}
             className="text-2xl md:text-4xl font-bold mb-6 font-sans text-white"
           >
             Frontend Developer
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            initial={{opacity: 0, y: 20}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.5, delay: 0.4}}
             className="text-xl mb-8 max-w-2xl mx-auto font-light text-gray-300"
           >
             Im passionate about creating exceptional digital experiences through
             clean, efficient, and accessible code.
           </motion.p>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            initial={{opacity: 0, y: 20}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.5, delay: 0.6}}
             className="flex justify-center space-x-4"
           >
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{scale: 1.05}}
+              whileTap={{scale: 0.95}}
               className="bg-[#4ecca3] text-[#1a1a2e] px-8 py-3 rounded-full font-medium text-lg hover:bg-opacity-90 transition-all"
               onClick={() => scrollToSection("projects")}
             >
@@ -212,8 +212,8 @@ export function PortfolioComponent() {
             <motion.a
               href="/path-to-vicky-mosafan-cv.pdf"
               download
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{scale: 1.05}}
+              whileTap={{scale: 0.95}}
               className="bg-transparent border border-[#4ecca3] text-[#4ecca3] px-8 py-3 rounded-full font-medium text-lg hover:bg-[#4ecca3] hover:text-[#1a1a2e] transition-all"
             >
               Download CV
@@ -233,9 +233,9 @@ export function PortfolioComponent() {
       <section id="about" className="py-20 px-6 bg-[#1a1a2e]">
         <div className="max-w-7xl mx-auto">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{opacity: 0, y: 20}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.5}}
             className="text-5xl font-bold mb-16 text-center font-serif text-[#4ecca3] tracking-wide"
           >
             About Me
@@ -243,32 +243,32 @@ export function PortfolioComponent() {
           <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-12 lg:space-y-0 lg:space-x-16">
             <motion.div
               className="lg:w-1/3"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              initial={{opacity: 0, x: -50}}
+              animate={{opacity: 1, x: 0}}
+              transition={{duration: 0.5, delay: 0.2}}
             >
               <div className="relative">
                 <div className="absolute -inset-2 bg-[#4ecca3] rounded-lg blur opacity-75 animate-pulse"></div>
                 <Image
-                  src="/my.jpg"
+                  src="/my1.jpg"
                   alt="Vicky Mosafan"
                   width={450}
-                  height={450}
+                  height={250}
                   className="rounded-lg relative z-10 object-cover shadow-xl"
                 />
               </div>
             </motion.div>
             <motion.div
               className="lg:w-2/3"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              initial={{opacity: 0, x: 50}}
+              animate={{opacity: 1, x: 0}}
+              transition={{duration: 0.5, delay: 0.4}}
             >
               <motion.p
                 className="mb-6 text-xl font-light text-gray-300 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
+                initial={{opacity: 0, y: 20}}
+                animate={{opacity: 1, y: 0}}
+                transition={{duration: 0.5, delay: 0.6}}
               >
                 <span className="text-[#4ecca3] font-semibold text-2xl">
                   Hello!
@@ -281,9 +281,9 @@ export function PortfolioComponent() {
               </motion.p>
               <motion.p
                 className="mb-6 text-xl font-light text-gray-300 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
+                initial={{opacity: 0, y: 20}}
+                animate={{opacity: 1, y: 0}}
+                transition={{duration: 0.5, delay: 0.8}}
               >
                 Currently expanding my knowledge in modern frameworks like{" "}
                 <span className="text-[#4ecca3] font-medium">
@@ -299,9 +299,9 @@ export function PortfolioComponent() {
               </motion.p>
               <motion.p
                 className="text-xl font-light text-gray-300 leading-relaxed text-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1 }}
+                initial={{opacity: 0, y: 20}}
+                animate={{opacity: 1, y: 0}}
+                transition={{duration: 0.5, delay: 1}}
               >
                 <span className="italic text-[#4ecca3]">
                   Lets connect and build something amazing together!
@@ -310,9 +310,9 @@ export function PortfolioComponent() {
               </motion.p>
               <motion.div
                 className="mt-10 flex flex-wrap gap-4"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 1.2 }}
+                initial={{opacity: 0, y: 20}}
+                animate={{opacity: 1, y: 0}}
+                transition={{duration: 0.5, delay: 1.2}}
               >
                 {["React", "Vue.js", "TypeScript", "Node.js", "GraphQL"].map(
                   (
@@ -325,7 +325,7 @@ export function PortfolioComponent() {
                         scale: 1.1,
                         boxShadow: "0 0 15px rgba(78, 204, 163, 0.5)",
                       }}
-                      whileTap={{ scale: 0.95 }}
+                      whileTap={{scale: 0.95}}
                     >
                       {skill}
                     </motion.span>
@@ -347,17 +347,17 @@ export function PortfolioComponent() {
             <motion.button
               onClick={prevSkill}
               className="text-[#4ecca3] hover:text-white transition-colors"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              whileHover={{scale: 1.1}}
+              whileTap={{scale: 0.9}}
             >
               <ChevronLeft className="w-10 h-10" />
             </motion.button>
             <motion.div
               key={currentSkillIndex}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.3 }}
+              initial={{opacity: 0, x: 50}}
+              animate={{opacity: 1, x: 0}}
+              exit={{opacity: 0, x: -50}}
+              transition={{duration: 0.3}}
               className="flex flex-col items-center w-64"
             >
               <div className="w-32 h-32 flex items-center justify-center mb-6 bg-[#1a1a2e] rounded-full p-4">
@@ -376,17 +376,17 @@ export function PortfolioComponent() {
             <motion.button
               onClick={nextSkill}
               className="text-[#4ecca3] hover:text-white transition-colors"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              whileHover={{scale: 1.1}}
+              whileTap={{scale: 0.9}}
             >
               <ChevronRight className="w-10 h-10" />
             </motion.button>
           </div>
           <motion.div
             className="mt-12 flex flex-wrap gap-4 justify-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            initial={{opacity: 0, y: 20}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.5, delay: 0.2}}
           >
             {skills.map((skill, index) => (
               <motion.span
@@ -396,8 +396,8 @@ export function PortfolioComponent() {
                     ? "bg-[#4ecca3] text-[#1a1a2e]"
                     : "bg-[#1a1a2e] text-[#4ecca3]"
                 }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{scale: 1.05}}
+                whileTap={{scale: 0.95}}
                 onClick={() => setCurrentSkillIndex(index)}
               >
                 {skill.name}
@@ -411,75 +411,84 @@ export function PortfolioComponent() {
       <section id="projects" className="py-20 px-6 bg-[#1a1a2e]">
         <div className="max-w-7xl mx-auto">
           <motion.h2
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{opacity: 0, y: -20}}
+            animate={{opacity: 1, y: 0}}
+            transition={{duration: 0.5}}
             className="text-4xl font-bold mb-12 text-center font-serif text-[#4ecca3]"
           >
             Featured Projects
           </motion.h2>
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
+            initial={{opacity: 0, scale: 0.9}}
+            animate={{opacity: 1, scale: 1}}
+            transition={{duration: 0.5}}
             className="bg-gradient-to-br from-[#2a2a4e] to-[#1a1a2e] rounded-xl shadow-2xl overflow-hidden"
           >
             <div className="p-8 md:p-12 flex flex-col items-center">
               <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
+                initial={{y: 20, opacity: 0}}
+                animate={{y: 0, opacity: 1}}
+                transition={{delay: 0.2, duration: 0.5}}
                 className="text-5xl mb-6"
               >
                 🚀
               </motion.div>
               <motion.h3
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
+                initial={{y: 20, opacity: 0}}
+                animate={{y: 0, opacity: 1}}
+                transition={{delay: 0.3, duration: 0.5}}
                 className="text-3xl md:text-4xl font-bold mb-4 text-center text-[#4ecca3]"
               >
                 Projects Coming Soon
               </motion.h3>
               <motion.p
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.4, duration: 0.5 }}
+                initial={{y: 20, opacity: 0}}
+                animate={{y: 0, opacity: 1}}
+                transition={{delay: 0.4, duration: 0.5}}
                 className="text-lg md:text-xl text-center text-gray-300 mb-8 max-w-2xl"
               >
-                Exciting projects are in the works! Stay tuned for a showcase of innovative web applications and cutting-edge designs.
+                Exciting projects are in the works! Stay tuned for a showcase of
+                innovative web applications and cutting-edge designs.
               </motion.p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-3xl">
                 {[
-                  { icon: <Rocket className="w-8 h-8" />, text: "Innovative Ideas" },
-                  { icon: <Code className="w-8 h-8" />, text: "Clean Code" },
-                  { icon: <Zap className="w-8 h-8" />, text: "High Performance" },
+                  {
+                    icon: <Rocket className="w-8 h-8" />,
+                    text: "Innovative Ideas",
+                  },
+                  {icon: <Code className="w-8 h-8" />, text: "Clean Code"},
+                  {icon: <Zap className="w-8 h-8" />, text: "High Performance"},
                 ].map((item, index) => (
                   <motion.div
                     key={index}
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    transition={{ delay: 0.5 + index * 0.1, duration: 0.5 }}
+                    initial={{y: 20, opacity: 0}}
+                    animate={{y: 0, opacity: 1}}
+                    transition={{delay: 0.5 + index * 0.1, duration: 0.5}}
                     className="bg-[#2a2a4e] rounded-lg p-6 flex flex-col items-center justify-center text-center hover:bg-[#3a3a5e] transition-colors duration-300"
                   >
                     <div className="text-[#4ecca3] mb-3">{item.icon}</div>
-                    <p className="text-sm md:text-base font-medium">{item.text}</p>
+                    <p className="text-sm md:text-base font-medium">
+                      {item.text}
+                    </p>
                   </motion.div>
                 ))}
               </div>
             </div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.5 }}
+            initial={{opacity: 0, y: 20}}
+            animate={{opacity: 1, y: 0}}
+            transition={{delay: 0.8, duration: 0.5}}
             className="text-center mt-12"
           >
             <motion.button
               onClick={() => setIsModalOpen(true)}
               className="inline-block bg-[#4ecca3] text-[#1a1a2e] px-8 py-3 rounded-full font-medium text-lg hover:bg-opacity-90 transition-all"
-              whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(78, 204, 163, 0.5)" }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 0 20px rgba(78, 204, 163, 0.5)",
+              }}
+              whileTap={{scale: 0.95}}
             >
               Notify Me When Projects Launch
             </motion.button>
@@ -573,8 +582,8 @@ export function PortfolioComponent() {
               href="https://github.com/vickymosafan"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ y: -2 }}
-              whileTap={{ y: 0 }}
+              whileHover={{y: -2}}
+              whileTap={{y: 0}}
               className="text-gray-400 hover:text-[#4ecca3]"
             >
               <Github className="w-6 h-6" />
@@ -583,8 +592,8 @@ export function PortfolioComponent() {
               href="https://linkedin.com/in/vickymosafan"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ y: -2 }}
-              whileTap={{ y: 0 }}
+              whileHover={{y: -2}}
+              whileTap={{y: 0}}
               className="text-gray-400 hover:text-[#4ecca3]"
             >
               <Linkedin className="w-6 h-6" />
@@ -593,16 +602,16 @@ export function PortfolioComponent() {
               href="https://twitter.com/vickymosafan"
               target="_blank"
               rel="noopener noreferrer"
-              whileHover={{ y: -2 }}
-              whileTap={{ y: 0 }}
+              whileHover={{y: -2}}
+              whileTap={{y: 0}}
               className="text-gray-400 hover:text-[#4ecca3]"
             >
               <Twitter className="w-6 h-6" />
             </motion.a>
             <motion.a
               href="mailto:vicky@mosafan.com"
-              whileHover={{ y: -2 }}
-              whileTap={{ y: 0 }}
+              whileHover={{y: -2}}
+              whileTap={{y: 0}}
               className="text-gray-400 hover:text-[#4ecca3]"
             >
               <Mail className="w-6 h-6" />
@@ -615,21 +624,23 @@ export function PortfolioComponent() {
       <AnimatePresence>
         {isModalOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
             onClick={() => setIsModalOpen(false)}
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+              initial={{scale: 0.9, opacity: 0}}
+              animate={{scale: 1, opacity: 1}}
+              exit={{scale: 0.9, opacity: 0}}
               className="bg-[#2a2a4e] p-8 rounded-lg shadow-xl max-w-md w-full mx-4"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex justify-between items-center mb-4">
-                <h3 className="text-2xl font-bold text-[#4ecca3]">Get Notified</h3>
+                <h3 className="text-2xl font-bold text-[#4ecca3]">
+                  Get Notified
+                </h3>
                 <button
                   onClick={() => setIsModalOpen(false)}
                   className="text-gray-400 hover:text-white transition-colors"
@@ -640,7 +651,8 @@ export function PortfolioComponent() {
               {!isSubscribed ? (
                 <form onSubmit={handleSubscribe} className="space-y-4">
                   <p className="text-gray-300">
-                    Enter your email to receive updates when new projects are launched.
+                    Enter your email to receive updates when new projects are
+                    launched.
                   </p>
                   <input
                     type="email"
@@ -659,7 +671,8 @@ export function PortfolioComponent() {
                 </form>
               ) : (
                 <p className="text-green-400 text-center">
-                  Thank you for subscribing! Youll be notified when new projects are launched.
+                  Thank you for subscribing! Youll be notified when new projects
+                  are launched.
                 </p>
               )}
             </motion.div>
