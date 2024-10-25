@@ -217,7 +217,7 @@ export function PortfolioComponent() {
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1a1a2e] z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1a1a2e] z-0 "></div>
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <motion.h1
             initial={{opacity: 0, y: 20}}
@@ -387,7 +387,10 @@ export function PortfolioComponent() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-6 bg-[#16213e]">
+      <section
+        id="skills"
+        className="py-20 px-6 bg-gradient-to-b from-transparent to-[#1a1a2e] to-[#1a1a2f] z-0"
+      >
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-16 font-serif text-[#4ecca3]">
             My Skills
@@ -457,7 +460,10 @@ export function PortfolioComponent() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-6 bg-[#1a1a2e]">
+      <section
+        id="projects"
+        className="py-20 px-6 bg-gradient-to-b from-transparent to-[#1a1a2e] z-0"
+      >
         <div className="max-w-7xl mx-auto">
           <motion.h2
             initial={{opacity: 0, y: -20}}
@@ -549,12 +555,15 @@ export function PortfolioComponent() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6 bg-[#16213e] text-white">
+      <section
+        id="contact"
+        className="py-20 px-6 bg-gradient-to-br from from-transparent to-[#1a1a2f] to-[#1a1a2e] text-white"
+      >
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center font-serif text-[#4ecca3]">
             Get in Touch
           </h2>
-          <div className="flex flex-col md:flex-row gap-8">
+          <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
             <div className="md:w-1/2">
               <form className="space-y-4">
                 <div>
@@ -608,14 +617,6 @@ export function PortfolioComponent() {
                   </button>
                 </div>
               </form>
-            </div>
-            <div className="md:w-1/2">
-              <div className="h-full bg-[#1a1a2e] rounded-lg overflow-hidden">
-                {/* Replace with an actual map component or embed */}
-                <div className="h-full bg-[#1a1a2e] flex items-center justify-center">
-                  <span className="text-gray-500">Map Placeholder</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
